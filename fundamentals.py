@@ -9,6 +9,7 @@ def add_numbers(a, b):
     5
     """
     # TODO: Write your code below
+    return a + b
     pass
 
 
@@ -24,6 +25,10 @@ def is_even(n):
     False
     """
     # TODO: Write your code below
+    if n % 2 == 0:
+        return True
+    else:
+        return False
     pass
 
 
@@ -39,6 +44,14 @@ def count_vowels(word):
     2
     """
     # TODO: Write your code below
+    vowels = ('a','e','i','o','u','A','E','I','O','U')
+    count = 0
+    for i  in word:
+        if i in vowels:
+             count += 1
+    return count
+    
+    
     pass
 
 
@@ -52,6 +65,7 @@ def find_max(numbers):
     10
     """
     # TODO: Write your code below
+    return max(numbers)
     pass
 
 
@@ -65,6 +79,7 @@ def reverse_string(s):
     'tac'
     """
     # TODO: Write your code below
+    return s[::-1]
     pass
 
 
@@ -81,6 +96,16 @@ def average(numbers):
     0
     """
     # TODO: Write your code below
+    average = 0
+    sum = 0
+    for i in numbers:
+        if i == []:
+            return 0
+        else:
+           sum += i
+           average = sum/int(len(i))
+    return average
+
     pass
 
 
@@ -96,6 +121,10 @@ def word_in_sentence(word, sentence):
     False
     """
     # TODO: Write your code below
+    if word in sentence:
+        return True
+    else:
+        return False
     pass
 
 
@@ -113,6 +142,14 @@ def factorial(n):
     1
     """
     # TODO: Write your code below
+    number = 1
+    for i in range(1,n+1):
+        if n == 0:
+            return 1
+
+        else:
+            number *= i
+    return number
     pass
 
 
@@ -120,13 +157,15 @@ def remove_duplicates(numbers):
     """
     Problem 9:
     Given a list of numbers, return a new list with duplicates removed.
-    The order of the first occurrence of each element should be preserved.
+    The order of the first occurrence of each new = vowels.split()element should be preserved.
 
     Example:
     >>> remove_duplicates([1, 2, 2, 3, 1])
     [1, 2, 3]
     """
     # TODO: Write your code below
+    new_list = list(set(numbers))
+    return new_list
     pass
 
 
@@ -144,4 +183,13 @@ def fizzbuzz(n):
     [1, 2, 'Fizz', 4, 'Buzz']
     """
     # TODO: Write your code below
+    new_l = []
+    for i in range(1,n):
+        new_l.append(i)
+        if 3 in new_l:
+            new_l = ['Fizz']
+        elif 5 in new_l:
+            new_l = ['Buzz']
+        
+    return new_l
     pass

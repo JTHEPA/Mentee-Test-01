@@ -21,4 +21,4 @@ You must **complete each function** so that all tests pass.
 2. Open your terminal and navigate to the project folder
 3. Run:
    ```bash
-   python -m unittest tests/fundamentals_tests.py
+   python3 -m unittest tests/fundamentals_tests.py
